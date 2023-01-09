@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver House</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <!-- я хотел сделать навигационную меню фиксированным, "программист - не программист если не пробует" :D -->
+                <img src="img/header-logo 1.svg" alt="logo" class="logo">
+                <div class="navbar">
+                    <a href="#" class="navbar__logo"><img src="img/logo.png" alt=""></a>
+                    <div class="navbar__block-text">
+                        <img src="img/logo-text.png" alt="" class="navbar__logo-text">
+                        <span class="desc">info@silverhouse.uz</span>
+                    </div>
+                    <!-- Оказывается focus работает только у тех элементов, которые являются интерактивными (кнопки, ссылки). А также если вы пропишите атрибут tabindex="0" к любому тегу, то он тоже станет интерактивным, и вы сможете применять псевдокласс :focus (ПРОСТО ДЛЯ ЗАМЕТКИ - ДЛЯ МЕНЯ!) -->
+                    <button class="navbar__menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button> <!-- ВНИЗУ ПРОБЛЕМА, ПРОЩУ ПОДГОТОВИТЬ НЕРВЫ -->
+                    <!-- не удалось решить проблему с focus, попробовал много разных методов: tabindex (который наверху комментарий), отдельные классы (ID, LIST), попробовал расставить код по порядку в css с html, проблема в том что focus не видит тегов/элементов/классов до него самого, т.е если поставить header__list после header__menu:focus~.header__list то фокус не сработает :(   -->
+                    <ul class="navbar__list list">
+                        <li><a href="#" class="navbar__link link">Жилые комплексы</a></li>
+                        <li><a href="#" class="navbar__link link">О компании</a></li>
+                        <li><a href="#" class="navbar__link link">Контакты</a></li>
+                        <li><a href="#" class="navbar__link link">Новости</a></li>
+                        <li><a href="#" class="navbar__link link">Акции</a></li>
+                        <li><a href="#" class="navbar__link link">Преимущества</a></li>
+                    </ul> 
+                    <!-- в результате мне пришлось создавать списки отдельно для мобильной версии (наверху) и компьютерной (внизу) -->   
+                </div>
+                <ul class="header__list list" id="1" tabindex="1">
+                    <li><a href="#" class="header__link link">Жилые комплексы</a></li>
+                    <li><a href="#" class="header__link link">О компании</a></li>
+                    <li><a href="#" class="header__link link">Контакты</a></li>
+                    <li><a href="#" class="header__link link">Новости</a></li>
+                    <li><a href="#" class="header__link link">Акции</a></li>
+                    <li><a href="#" class="header__link link">Преимущества</a></li>
+                </ul>
+                <!-- да, согласен получилось "тяп-ляп" КАК ЭТО ИСПРАВИТЬ, ПОМОГИТЕ ПОЖАЛУЙСТА, Я ХОЧУ ОСТАВИТЬ ЭТО ДИЗАЙНЕРСКОЕ РЕШЕНИЕ (ФИКСИРОВАННЫЙ НАВИГАЦИОННЫЙ МЕНЮ) И СДЕЛАТЬ ОДИН СПИСОК КО ВСЕМ И ДЛЯ НАВИГАЦИОННУЮ МЕНЮ (MOBILE) И ДЛЯ DESKTOP-->              
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <img src="img/block 1.jpg" alt="img" class="main__img">
+            <div class="about">
+                <div class="about__advantages">
+                    <h3 class="advantages__title">Почему лучше покупать в новостройках?</h3>
+                    <p class="advantages__desc desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat volupt atem.</p>
+                </div>
+                <div class="about__contacts">
+                    <h3 class="contacts__title">Наши контакты</h3>
+                    <p class="contacts__desc">Адрес: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="contacts__number">+99890 900 00 00</p>     
+                    <p class="contacts__email">info@silverhouse.uz</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer"><!-- СЛЕДУЮЩАЯ ПРОБЛЕМА В ТОМ ЧТО, FOOTER CONTAINER ВЫЛЕЗАЕТ НАВЕРХ К ДРУГОМУ КОНТЕЙНЕРУ -->
+        <div class="container">
+            <img src="img/footer-logo 1.png" alt="logo" class="footer__logo">
+            <img src="img/logo.png" alt="" class="footer__logo-mobile">
+            <div class="footer__div">    
+                <p class="footer__work-time">Единый кол-центр (круглосуточно)</p>
+                <p class="footer__number">+99890 900 00 00</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

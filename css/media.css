@@ -1,0 +1,135 @@
+@media(max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .about__advantages {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 50px 40px;
+    }
+    
+    .about__contacts {
+        margin: 20px auto 0;
+        max-width: 960px;
+        height: 100%;
+    }
+    
+    .about__contacts p {
+        display: inline;
+        text-align: left;
+    }
+}
+
+@media(max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px
+    }
+    
+    .navbar {
+        display: flex;
+    }
+    
+    .logo {
+        display: none;
+    }
+    
+    .navbar__menu {
+        display: flex;
+        z-index: 99;
+    }
+    
+    .navbar__list {
+        position: fixed;
+        top: 17%;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background: transparent;
+        width: 250px;
+        height: 300px;
+        transform: translateX(-100%);
+        transition: 600ms;
+    }
+    
+    .navbar__link {
+        padding: 10px;
+        color: #4581B7;
+    }
+
+    .header__list {
+        display: none;
+    }
+
+    .about__advantages {
+        max-width: 900px;
+        padding: 50px 40px;
+    }
+    
+    .about__contacts {
+        max-width: 900px;
+    }
+    
+    .about__contacts p {
+        margin: 0;
+        padding: 0;
+    }
+
+    footer .container {
+        max-width: unset;
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .footer .container {
+        flex-direction: column;
+    }
+
+    .footer__div {
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .footer__logo {
+        display: none;
+    }
+
+    .footer__logo-mobile {
+        display: block;
+        width: 90px;
+    }
+}
+
+@media(max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .about__advantages {
+        padding: 30px 25px;
+    }
+
+    .advantages__title, .advantages__desc {
+        text-align: center;
+    }
+
+    .contacts__title {
+        text-align: center;
+    }
+}
