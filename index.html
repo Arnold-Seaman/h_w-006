@@ -11,9 +11,8 @@
 </head>
 <body>
     <header>
-        <div class="container"> <!-- ЗДРАВСТВУЙТЕ, ТУТ ДВА ОШИБОК В КОДЕ! -->
+        <div class="container">
             <nav class="nav">
-                <!-- я хотел сделать навигационную меню фиксированным, "программист - не программист который не пробует" :D -->
                 <img src="img/header-logo 1.svg" alt="logo" class="logo">
                 <div class="navbar">
                     <a href="#" class="navbar__logo"><img src="img/logo.png" alt=""></a>
@@ -21,13 +20,11 @@
                         <img src="img/logo-text.png" alt="" class="navbar__logo-text">
                         <span class="desc">info@silverhouse.uz</span>
                     </div>
-                    <!-- Оказывается focus работает только у тех элементов, которые являются интерактивными (кнопки, ссылки). А также если вы пропишите атрибут tabindex="0" к любому тегу, то он тоже станет интерактивным, и вы сможете применять псевдокласс :focus (ПРОСТО ДЛЯ ЗАМЕТКИ - ДЛЯ МЕНЯ!) -->
                     <button class="navbar__menu">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </button> <!-- ВНИЗУ ПРОБЛЕМА, ПРОЩУ ПОДГОТОВИТЬ НЕРВЫ -->
-                    <!-- не удалось решить проблему с focus, попробовал много разных методов: tabindex (который наверху комментарий), отдельные классы (ID, LIST), попробовал расставить код по порядку в css с html, проблема в том что focus не видит тегов/элементов/классов до него самого, т.е если поставить header__list после header__menu:focus~.header__list то фокус не сработает :(   -->
+                    </button>
                     <ul class="navbar__list list">
                         <li><a href="#" class="navbar__link link">Жилые комплексы</a></li>
                         <li><a href="#" class="navbar__link link">О компании</a></li>
@@ -35,8 +32,7 @@
                         <li><a href="#" class="navbar__link link">Новости</a></li>
                         <li><a href="#" class="navbar__link link">Акции</a></li>
                         <li><a href="#" class="navbar__link link">Преимущества</a></li>
-                    </ul> 
-                    <!-- в результате мне пришлось создавать списки отдельно для мобильной версии (наверху) и компьютерной (внизу) -->   
+                    </ul>   
                 </div>
                 <ul class="header__list list" id="1" tabindex="1">
                     <li><a href="#" class="header__link link">Жилые комплексы</a></li>
@@ -45,8 +41,7 @@
                     <li><a href="#" class="header__link link">Новости</a></li>
                     <li><a href="#" class="header__link link">Акции</a></li>
                     <li><a href="#" class="header__link link">Преимущества</a></li>
-                </ul>
-                <!-- да, согласен получилось "тяп-ляп" КАК ЭТО ИСПРАВИТЬ, ПОМОГИТЕ ПОЖАЛУЙСТА, Я ХОЧУ ОСТАВИТЬ ЭТО ДИЗАЙНЕРСКОЕ РЕШЕНИЕ (ФИКСИРОВАННЫЙ НАВИГАЦИОННЫЙ МЕНЮ) И СДЕЛАТЬ ОДИН СПИСОК КО ВСЕМ И ДЛЯ НАВИГАЦИОННУЮ МЕНЮ (MOBILE) И ДЛЯ DESKTOP-->              
+                </ul>         
             </nav>
         </div>
     </header>
@@ -67,7 +62,7 @@
             </div>
         </div>
     </main>
-    <footer class="footer"><!-- СЛЕДУЮЩАЯ ПРОБЛЕМА В ТОМ ЧТО, FOOTER CONTAINER ВЫЛЕЗАЕТ НАВЕРХ К ДРУГОМУ КОНТЕЙНЕРУ -->
+    <footer class="footer">
         <div class="container">
             <img src="img/footer-logo 1.png" alt="logo" class="footer__logo">
             <img src="img/logo.png" alt="" class="footer__logo-mobile">
